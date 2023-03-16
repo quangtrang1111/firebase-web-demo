@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app {
+  height: 100vh;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.messages-wrapper {
+  overflow: auto;
+  height: calc(100vh - 3rem);
+}
