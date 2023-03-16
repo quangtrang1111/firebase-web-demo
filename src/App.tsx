@@ -36,12 +36,10 @@ function App() {
       collection(db, config.dbCollection),
       orderBy("createdAt", "desc")
     );
-    const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
       let messages: any[] = [];
 
-      QuerySnapshot.forEach((doc) => {
-        console.log(doc);
-
+      querySnapshot.forEach((doc) => {
         messages.push({ ...doc.data(), id: doc.id });
       });
 
